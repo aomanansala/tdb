@@ -1,0 +1,37 @@
+#search-container {
+    background: url('/images/hero-bg-2x.3ada8e11.jpg') no-repeat center scroll transparent;
+    background-size: cover;
+    display: table;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &:after {
+        background: rgba(0, 0, 0, .5);
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    #search-content-container {
+        display: table-cell;
+        position: relative;
+        vertical-align: middle;
+        z-index: 9;
+
+        h3, p {
+            color: #ffffff;
+        }
+
+        #search-form {
+            background: #ffffff;
+            padding: 25px;
+        }
+    }
+}

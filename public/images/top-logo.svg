@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="175.749" height="55.336" viewBox="0 0 175.749 55.336">
+  <g id="Group_79" data-name="Group 79" transform="translate(-1227.96 -322.826)">
+    <g id="Group_4" data-name="Group 4" transform="translate(1246.215 321.036) rotate(30)">
+      <path id="Path_1" data-name="Path 1" d="M13.226-.053c7.3-.029,13.205,6.688,13.179,15S20.437,30.032,13.133,30.062s-13.205-6.688-13.179-15S5.921-.024,13.226-.053Z" transform="translate(33.594 34.275) rotate(180)" fill="#0d0d0d"/>
+      <path id="Path_2" data-name="Path 2" d="M10.755-.038A10.664,10.664,0,0,1,21.473,10.679,10.847,10.847,0,0,1,10.68,21.473,10.664,10.664,0,0,1-.038,10.755,10.847,10.847,0,0,1,10.755-.038Z" transform="translate(43.711 40.666) rotate(180)" fill="#f27405"/>
+      <path id="Path_3" data-name="Path 3" d="M9.321-.033A9.242,9.242,0,0,1,18.61,9.255,9.4,9.4,0,0,1,9.256,18.61,9.242,9.242,0,0,1-.033,9.321,9.4,9.4,0,0,1,9.321-.033Z" transform="translate(18.597 36.456) rotate(180)" fill="#f2b33d"/>
+      <path id="Path_4" data-name="Path 4" d="M7.529-.027a7.465,7.465,0,0,1,7.5,7.5,7.593,7.593,0,0,1-7.555,7.555,7.465,7.465,0,0,1-7.5-7.5A7.593,7.593,0,0,1,7.529-.027Z" transform="translate(18.678 14.992) rotate(180)" fill="#f2c230"/>
+    </g>
+    <text id="SCHOOL_DB" data-name="SCHOOL DB" transform="translate(1338.708 357.851)" fill="#0d0d0d" font-size="21" font-family="Montserrat-Bold, Montserrat" font-weight="700" letter-spacing="-0.02em"><tspan x="-64.943" y="0">SCHOOL DB</tspan></text>
+  </g>
+</svg>

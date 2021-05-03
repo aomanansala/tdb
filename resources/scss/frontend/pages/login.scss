@@ -1,0 +1,22 @@
+#login-page {
+    background: url('/images/login-featured-img.99660514.jpg') no-repeat center scroll transparent;
+    background-size: cover;
+
+    #login-page-container {
+        background: #F8F8F8;
+        display: table;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 35%;
+
+        #login-page-content-container {
+            display: table-cell;
+            padding: 30px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+
+}
