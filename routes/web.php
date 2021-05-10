@@ -14,3 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 include('frontend.php');
+include('auth.php');
+include('backend.php');
+

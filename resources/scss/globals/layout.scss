@@ -1,0 +1,112 @@
+
+body {
+    padding-left: 250px;
+    padding-top: 125px;
+
+    .inline-block {
+        display: inline-block;
+
+        h6 {
+            margin: 0;
+        }
+    }
+
+    .jumbotron, .jumbotron-fluid {
+        margin-bottom: 1em;
+        padding: 2rem 1rem;
+    }
+
+    .vertical-divider {
+        border-right: 1px solid #adb5bd;
+        display: inline-block;
+        height: 20px;
+        margin: 0 20px;
+        vertical-align: middle;
+    }
+
+    .no-border {
+        border: none !important;
+    }
+
+    .btn-primary {
+        color: #ffffff !important;
+    }
+
+    .page-sidebar {
+        background: #ffffff;
+        padding: 30px;
+
+        a {
+            color: #212529;
+
+            &:hover {
+                background: #eeeeee;
+            }
+        }
+
+        a.active {
+            background: #343a40;
+            color: #ffffff;
+        }
+    }
+
+    .tdb.card {
+        border: none;
+        border-radius: 0px;
+        padding: 30px;
+    }
+
+    #page-sidebar-container {
+        background: #ffffff;
+        box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.2);
+        height: 100%;
+        left: 0;
+        padding: 30px;
+        position: fixed;
+        top: 0;
+        width: 250px;
+        z-index: 999;
+
+        #logo-container {
+            margin-bottom: 30px;
+        }
+
+        #menu-container {
+            ul {
+                margin: 0;
+                padding: 0;
+
+                a {
+                    color: #4C4C4C;
+                    display: block;
+                    padding: 10px 20px;
+                    text-decoration: none;
+
+                    &:hover {
+                        background: #EEEEEE;
+                    }
+                }
+            }
+        }
+    }
+
+    #page-header-container {
+        background: #ffffff;
+        box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.2);
+        left: 0;
+        padding-left: 250px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 998;
+
+        #main-header-container {
+            border-bottom: 1px solid #e2e2e2;
+            padding: 0.5rem 1rem;
+        }
+
+        #secondary-header-container {
+            padding: 8px 20px;
+        }
+    }
+}

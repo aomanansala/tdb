@@ -22,3 +22,5 @@ _ide_helper.php
 /storage/debugbar
 /.idea
 resources/js/tools/routes-data.js
+
+public/images/
