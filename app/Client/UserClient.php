@@ -26,7 +26,7 @@ class UserClient extends DbClient
     public function updateUser($data)
     {
         return $this->decoder->decode(
-            $this->post('Users', [
+            $this->put('Users', [
                 'json' => $data
             ])->getBody()
         );

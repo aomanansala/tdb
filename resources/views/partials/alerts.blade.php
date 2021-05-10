@@ -1,11 +1,11 @@
-@if (session()->has('successMessage'))
-    <div class="alert alert-success mb-0">
-        {{ session()->get('successMessage') }}
-    </div>
-@endif
 
-@if (session()->has('errorMessage'))
-    <div class="alert alert-danger mb-0">
-        {{ session()->get('errorMessage') }}
-    </div>
-@endif
+<script>
+    window.addEventListener('errorMessage', event => {
+        toastr.error(event.detail.message);
+    });
+
+    window.addEventListener('successMessage', event => {
+        toastr.error(event.detail.message);
+    });
+</script>
+

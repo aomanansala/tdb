@@ -17,7 +17,7 @@
     @livewireStyles
 </head>
 
-<body style="padding-top: {{ (session()->has('successMessage') || session()->has('errorMessage')) ? '175px' : '' }}">
+<body>
 <div>
     @include('backend.partials.side-menu')
     @include('backend.partials.header')

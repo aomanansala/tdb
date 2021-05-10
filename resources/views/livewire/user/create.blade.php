@@ -5,12 +5,6 @@
                 <div class="inline-block">
                     <h6>Create user</h6>
                 </div>
-
-                <div class="vertical-divider"></div>
-
-                <div class="inline-block">
-                    <h6>Add User</h6>
-                </div>
             </div>
 
             <div class="col-md-6 text-right">
@@ -78,7 +72,7 @@
                         <div class="row">
                             <div class="col-md-4"></div>
                             <div class="col-md-6">
-                                <button type="button" class="btn btn-sm btn-primary" wire:click="save">Save and continue</button>
+                                <button type="button" class="btn btn-sm btn-primary" wire:click="save">Create</button>
                                 <a href="{{ route('admin.users.index') }}" class="btn btn-sm btn-danger">Cancel</a>
                             </div>
                         </div>

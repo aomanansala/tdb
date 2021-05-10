@@ -6,9 +6,8 @@ namespace App\Http\Livewire\User;
 
 use App\Client\UserClient;
 use Exception;
-use Livewire\Component;
 
-class Create extends Component
+class Create extends UserComponent
 {
     public $user = [
         'userRoleId' => 1,
@@ -19,29 +18,17 @@ class Create extends Component
         'userName',
     ];
 
-    public function rules()
-    {
-        return [
-            'user.email' => 'required|email',
-            'user.firstName' => 'required',
-            'user.lastName' => 'required',
-            'user.password' => 'required',
-            'user.userName' => 'required',
-        ];
-    }
-
     public function save()
     {
         $this->validate();
 
         try {
             if (app(UserClient::class)->createUser($this->user)) {
-                session()->flash('successMessage', 'Successfully created user');
-
+                $this->dispatchBrowserEvent('successMessage', ['message' => 'Successfully created user']);
                 return redirect()->route('admin.users.index');
             }
         } catch (Exception $exception) {
-            session()->flash('errorMessage', 'Failed to create user');
+            $this->dispatchBrowserEvent('errorMessage', ['message' => 'Failed to create user']);
         }
 
         return back();

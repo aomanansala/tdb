@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "bootstrap": "^4.6.0",
-        "popper.js": "^1.12"
+        "popper.js": "^1.12",
+        "toastr": "^2.1.4"
     }
 }

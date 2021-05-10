@@ -41,6 +41,4 @@
             </div>
         </div>
     </div>
-
-    @include('partials.alerts')
 </div>
