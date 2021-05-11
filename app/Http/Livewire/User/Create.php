@@ -24,7 +24,7 @@ class Create extends UserComponent
 
         try {
             if (app(UserClient::class)->createUser($this->user)) {
-                $this->dispatchBrowserEvent('successMessage', ['message' => 'Successfully created user']);
+                session()->flash('successMessage', 'Successfully created user');
                 return redirect()->route('admin.users.index');
             }
         } catch (Exception $exception) {

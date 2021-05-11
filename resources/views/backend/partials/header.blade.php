@@ -41,4 +41,6 @@
             </div>
         </div>
     </div>
+
+    @include('partials.flash-messages')
 </div>

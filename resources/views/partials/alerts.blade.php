@@ -5,7 +5,7 @@
     });
 
     window.addEventListener('successMessage', event => {
-        toastr.error(event.detail.message);
+        toastr.success(event.detail.message);
     });
 </script>
 

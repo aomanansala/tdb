@@ -20,7 +20,7 @@
             </div>
 
             <div class="col-md-6 text-right">
-                <a href="{{ route('admin.users.create') }}" class="btn btn-sm btn-primary">Add new user</a>
+                <a href="{{ route('admin.users.create') }}" class="btn btn-sm btn-primary"></span> Add new user</a>
             </div>
         </div>
     @endsection
@@ -32,7 +32,7 @@
                     <div class="row align-items-center" style="margin-bottom: 20px;">
                         <div class="col-md-6">
                             <div class="form-inline">
-                                <select class="form-control" v-model="length" @change="resetPagination()">
+                                <select class="form-control">
                                     <option value="10">10</option>
                                     <option value="20">20</option>
                                     <option value="30">30</option>
@@ -68,8 +68,21 @@
                                 <td>{{ $user->userRoleId }}</td>
                                 <td>active</td>
                                 <td>
-                                    <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                                    <button type="button" class="btn btn-sm btn-danger">Delete</button>
+
+
+                                    @if ($delete && $user->id == $userId)
+                                        <button type="button" class="btn btn-sm btn-danger" wire:click="confirmDelete">
+                                            <span class="fa fa-check"></span>
+                                        </button>
+
+                                        <button type="button" class="btn btn-sm btn-primary" wire:click="cancelDelete">
+                                            <span class="fa fa-stop"></span>
+                                        </button>
+                                    @else
+                                        <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-sm btn-primary">Edit</a>
+
+                                        <button type="button" class="btn btn-sm btn-danger" wire:click="delete({{ $user->id }})">Delete</button>
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach
@@ -78,4 +91,6 @@
             </div>
         </div>
     </div>
+
+    @include('partials.alerts')
 </div>

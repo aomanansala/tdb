@@ -4,6 +4,7 @@ namespace App\Http\Livewire\User;
 
 use App\Client\UserClient;
 use Exception;
+use Symfony\Component\HttpFoundation\Response;
 
 class Edit extends UserComponent
 {
@@ -19,12 +20,14 @@ class Edit extends UserComponent
         $this->validate();
 
         try {
-            if (app(UserClient::class)->updateUser($this->user)) {
-                $this->dispatchBrowserEvent('successMessage', ['message' => 'Successfully updated user']);
+            if (app(UserClient::class)->updateUser($this->user) == Response::HTTP_OK) {
+
+                session()->flash('successMessage', 'Successfully updated user');
                 return redirect()->route('admin.users.index');
             }
         } catch (Exception $exception) {
             $this->dispatchBrowserEvent('errorMessage', ['message' => 'Failed to update user']);
+            logger()->info($exception->getMessage());
         }
 
         return back();

@@ -28,7 +28,7 @@ class UserClient extends DbClient
         return $this->decoder->decode(
             $this->put('Users', [
                 'json' => $data
-            ])->getBody()
+            ])->getStatusCode()
         );
     }
 
@@ -39,5 +39,10 @@ class UserClient extends DbClient
                 'json' => $data
             ])->getBody()
         );
+    }
+
+    public function deleteUser($id)
+    {
+        return $this->decoder->decode($this->delete("Users/{$id}")->getStatusCode());
     }
 }

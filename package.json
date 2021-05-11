@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "bootstrap": "^4.6.0",
+        "font-awesome": "^4.7.0",
         "popper.js": "^1.12",
         "toastr": "^2.1.4"
     }
