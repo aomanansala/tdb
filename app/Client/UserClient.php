@@ -13,7 +13,9 @@ class UserClient extends DbClient
 
     public function getUsers()
     {
-        return $this->decoder->decode($this->get('Users')->getBody());
+        return json_decode(
+            json_encode($this->decoder->decode($this->get('Users')->getBody()))
+        , true);
     }
 
     public function getUser($id)

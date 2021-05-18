@@ -62,15 +62,15 @@
 
                         @foreach ($users as $user)
                             <tr>
-                                <td>{{ $user->firstName }} {{ $user->lastName }}</td>
-                                <td>{{ $user->email }}</td>
+                                <td>{{ $user['firstName'] }} {{ $user['lastName'] }}</td>
+                                <td>{{ $user['email'] }}</td>
                                 <td>1234567890</td>
-                                <td>{{ $user->userRoleId }}</td>
+                                <td>{{ $user['userRoleId'] }}</td>
                                 <td>active</td>
                                 <td>
 
 
-                                    @if ($delete && $user->id == $userId)
+                                    @if ($delete && $user['id'] == $userId)
                                         <button type="button" class="btn btn-sm btn-danger" wire:click="confirmDelete">
                                             <span class="fa fa-check"></span>
                                         </button>
@@ -79,9 +79,9 @@
                                             <span class="fa fa-stop"></span>
                                         </button>
                                     @else
-                                        <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                        <a href="{{ route('admin.users.edit', $user['id']) }}" class="btn btn-sm btn-primary">Edit</a>
 
-                                        <button type="button" class="btn btn-sm btn-danger" wire:click="delete({{ $user->id }})">Delete</button>
+                                        <button type="button" class="btn btn-sm btn-danger" wire:click="delete({{ $user['id'] }})">Delete</button>
                                     @endif
                                 </td>
                             </tr>

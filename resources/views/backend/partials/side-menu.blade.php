@@ -6,7 +6,7 @@
     <div id="menu-container">
         <ul>
             <a href="">Dashboard</a>
-            <a href="#">Organization</a>
+            <a href="{{ route('admin.organisations.index') }}">Organization</a>
             <a href="">Prospecting</a>
             <a href="">Harvesting</a>
             <a href="{{ route('admin.users.index') }}">Users</a>

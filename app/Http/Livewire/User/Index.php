@@ -13,10 +13,13 @@ class Index extends Component
     public $delete = false;
     public $userId;
 
-    public function render()
+    public function mount()
     {
         $this->users = app(UserClient::class)->getUsers();
+    }
 
+    public function render()
+    {
         return view('livewire.user.index')->extends('backend.layout.app')->section('content');
     }
 
@@ -34,6 +37,10 @@ class Index extends Component
 
         try {
             if (app(UserClient::class)->deleteUser($this->userId) == Response::HTTP_OK) {
+                $this->users = collect($this->users)->filter(function($user) {
+                    return $user['id'] != $this->userId;
+                })->all();
+
                 $this->dispatchBrowserEvent('successMessage', ['message' => 'Successfully deleted user']);
             }
         } catch (Exception $exception) {
@@ -41,14 +48,11 @@ class Index extends Component
             logger()->info($exception->getMessage());
         }
 
-
-
         $this->reset(['userId', 'delete']);
     }
 
     public function cancelDelete()
     {
-        $this->delete = false;
-        $this->userId = null;
+        $this->reset(['userId', 'delete']);
     }
 }

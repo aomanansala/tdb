@@ -6,4 +6,5 @@ Route::group([
     'middleware' => ['admin']
 ], function () {
     include 'backend/users.php';
+    include 'backend/organisations.php';
 });
